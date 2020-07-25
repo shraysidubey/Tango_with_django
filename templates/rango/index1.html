@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rango</title>
+    </head>
+
+    <a href="/rango/add_Page/">Add a New page</a><br />
+
+    <body>
+        <h1>Rango says..hello world!</h1>
+
+        {% if Pages %}
+            <ul>
+                {% for Page in Pages %}
+                <!-- Following line changed to add an HTML hyperlink -->
+                <li><a href="/rango/Page/{{ Page.slug }}">{{ Page.name }}</a></li>
+                {% endfor %}
+            </ul>
+       {% else %}
+            <strong>There are no Pages present.</strong>
+       {% endif %}
+
+    </body>
+</html>
