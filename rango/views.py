@@ -277,5 +277,4 @@ def search(request):
             result_list = run_query(query)
             print("8609836098360983096830968")
             print(result_list)
-
     return render(request, 'rango/search.html', {'result_list': result_list})
